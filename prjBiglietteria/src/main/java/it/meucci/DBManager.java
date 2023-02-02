@@ -11,7 +11,7 @@ public class DBManager {
 	private String userDB;
 	private String passwordDB;
 	
-/*	public DBManager() throws Exception 
+public DBManager() throws Exception 
 	{
 		//instaurazione della connessione
 		urlDB="jdbc:mysql://localhost:3306/AZIENDA_5BI?serverTimezone=UTC";
@@ -30,8 +30,11 @@ public class DBManager {
 		query.close();
 		conn.close();
 	}
+	public boolean checkRegistration(Utente u) {
+		return true;
+	}
 	
-	public int insertCliente(cliente cliente) throws SQLException
+	/*public int insertCliente(cliente cliente) throws SQLException
 	{
 		int nRighe;
 		//INSERT

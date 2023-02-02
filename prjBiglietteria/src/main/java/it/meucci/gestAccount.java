@@ -29,7 +29,14 @@ public class gestAccount extends HttpServlet {
 			if(!checkPassword(password,conf_pwd)) response.sendRedirect("register.jsp?msg=reg_pwd");
 			String nome = request.getParameter("nome");
 			String cognome = request.getParameter("cognome");
-			
+			//IMPLEMENTARE CHECK REG IN DBManager
+			DBManager db;
+			try {
+				db = new DBManager();
+				Utente u = new Utente(email,password,nome,cognome);
+				if(db.checkRegistration(u)) {response.sendRedirect("login.jsp?msg=reg_done");}
+				else {response.sendRedirect("register.jsp?msg=reg_exist");}
+			} catch (Exception e) {}
 		}
 	}
 	
