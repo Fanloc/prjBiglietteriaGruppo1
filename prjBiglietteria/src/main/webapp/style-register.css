@@ -92,6 +92,8 @@ form{
 }
 
 .email-field,
+.nome-field,
+.cognome-field,
 .password-field{
     display: flex;
     justify-content: center;
@@ -101,7 +103,8 @@ form{
 }
 
 
-input[type="email"], 
+input[type="text"],
+input[type="email"],  
 input[type="password"] {
     width: 100%;
     height: 45px;
@@ -113,6 +116,7 @@ input[type="password"] {
     font-size: 15px;
 }
 
+input[type="text"]:focus, 
 input[type="email"]:focus, 
 input[type="password"]:focus{
     outline: none;

@@ -6,55 +6,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-register.css">
     <title>Login</title>
-    <link rel="stylesheet" href="style-login.css">
 </head>
 <body>
-    <div class="container">
-        <div class="screen">
-            <div class="screen__content">
-                <form class="login" method="post" action="gestAccount?cmd=register">
-                    <div class="login__field">
-                        <i class="login__icon fas fa-user"></i>
-                        <input type="email" class="login__input" name="email" placeholder="Email">
-                    </div>
-                    <div class="login__field">
-                        <i class="login__icon fas fa-lock"></i>
-                        <input type="text" class="login__input" name="nome" placeholder="Nome">
-                    </div>
-                    <div class="login__field">
-                        <i class="login__icon fas fa-lock"></i>
-                        <input type="text" class="login__input" name="cognome" placeholder="Cognome">
-                    </div>
-                    <div class="login__field">
-                        <i class="login__icon fas fa-lock"></i>
-                        <input type="password" class="login__input" name="password" placeholder="Password">
-                    </div>
-                    <div class="login__field">
-                        <i class="login__icon fas fa-lock"></i>
-                        <input type="password" class="login__input" name="conf_password" placeholder="Conferma Password">
-                    </div>
-                    <button class="button login__submit">
-                        <span class="button__text">Register Now</span>
-                        <i class="button__icon fas fa-chevron-right"></i>
-                    </button>				
-                </form>
-                <div class="social-login">
-                    <h3>Register via</h3>
-                    <div class="social-icons">
-                        <a href="#" class="social-login__icon fab fa-instagram"></a>
-                        <a href="#" class="social-login__icon fab fa-facebook"></a>
-                        <a href="#" class="social-login__icon fab fa-twitter"></a>
-                    </div>
-                </div>
+    <div class="left-page">
+        <form action="gestAccount?cmd=register" method="post">
+            <h1>Register</h1>
+            
+             <div class="nome-field">               
+                <input type="text" name="nome" id="nome" class="nome" autocomplete="off" placeholder="Nome" >
             </div>
-            <div class="screen__background">
-                <span class="screen__background__shape screen__background__shape4"></span>
-                <span class="screen__background__shape screen__background__shape3"></span>		
-                <span class="screen__background__shape screen__background__shape2"></span>
-                <span class="screen__background__shape screen__background__shape1"></span>
-            </div>		
+            
+            
+            <div class="cognome-field">               
+                <input type="text" name="cognome" id="cognome" class="cognome" autocomplete="off" placeholder="Cognome" >
+            </div>
+
+            <div class="email-field">               
+                <input type="email" name="email" id="email" class="email" autocomplete="off" placeholder="Email" >
+            </div>
+    
+            <div class="password-field">
+                    <input type="password" name="password" id="password" class="password" autocomplete="off" placeholder="Password">
+            </div>
+            
+            <div class="password-field">
+                    <input type="password" name="conf_pwd" id="password" class="password" autocomplete="off" placeholder="Conferma Password">
+            </div>
+            <a>Password Dimenticata?</a>
+
+            <input type="submit" value="Registrati!">
+  
+        </form>
+        <div class="buttons">
+            <a href="login.jsp"class="access">Login</a>
+            <a class="access">Register</a>
         </div>
+    </div>
+
+    <div class="right-page">
+        <nav>
+            <img src="images/home-icon.png" alt="home-icon" class="home-icon">
+        </nav>
     </div>
 </body>
 </html>

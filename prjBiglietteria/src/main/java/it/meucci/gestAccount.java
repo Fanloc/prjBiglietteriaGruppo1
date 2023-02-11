@@ -25,8 +25,8 @@ public class gestAccount extends HttpServlet {
 		String cmd = request.getParameter("cmd");
 		if(cmd.equalsIgnoreCase("register"))
 		{
-			String conf_pwd = request.getParameter("conf_password");
-			if(!checkPassword(password,conf_pwd)) response.sendRedirect("register.jsp?msg=reg_pwd");
+			String conf_pwd = request.getParameter("conf_pwd");
+			if(!password.equals(conf_pwd)) response.sendRedirect("register.jsp?msg=reg_pwd");
 			String nome = request.getParameter("nome");
 			String cognome = request.getParameter("cognome");
 			//IMPLEMENTARE CHECK REG IN DBManager
@@ -41,8 +41,5 @@ public class gestAccount extends HttpServlet {
 	}
 	
 	
-	private boolean checkPassword(String pwd, String conf_pwd) {
-		if(pwd.equals(conf_pwd)) return true;
-		else return false;
-	}
+
 }
