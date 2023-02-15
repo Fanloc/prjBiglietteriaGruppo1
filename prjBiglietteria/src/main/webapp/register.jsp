@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="left-page">
-        <form action="gestAccount" method="post">
+        <form action="gestAccount?cmd=register" method="post">
             <h1>Register</h1>
             
              <div class="nome-field">               

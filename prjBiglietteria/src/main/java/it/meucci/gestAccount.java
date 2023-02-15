@@ -23,7 +23,7 @@ public class gestAccount extends HttpServlet {
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		String cmd = request.getParameter("cmd");
-		System.out.println(cmd);
+		System.out.println(cmd);s
 		if(cmd.equalsIgnoreCase("register"))
 		{
 			response.sendRedirect("login.jsp");
@@ -41,7 +41,4 @@ public class gestAccount extends HttpServlet {
 			} catch (Exception e) {}
 		}
 	}
-	
-	
-
 }
