@@ -23,8 +23,10 @@ public class gestAccount extends HttpServlet {
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		String cmd = request.getParameter("cmd");
+		System.out.println(cmd);
 		if(cmd.equalsIgnoreCase("register"))
 		{
+			response.sendRedirect("login.jsp");
 			String conf_pwd = request.getParameter("conf_pwd");
 			if(!password.equals(conf_pwd)) response.sendRedirect("register.jsp?msg=reg_pwd");
 			String nome = request.getParameter("nome");

@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style-register.css">
-    <title>Login</title>
+    <title>Register</title>
 </head>
 <body>
     <div class="left-page">
-        <form action="gestAccount?cmd=register" method="post">
+        <form action="gestAccount" method="post">
             <h1>Register</h1>
             
              <div class="nome-field">               
