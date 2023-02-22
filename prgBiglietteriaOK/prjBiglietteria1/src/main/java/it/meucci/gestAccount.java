@@ -23,10 +23,9 @@ public class gestAccount extends HttpServlet {
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		String cmd = request.getParameter("cmd");
-		System.out.println(cmd);
+		System.out.println("cmd");
 		if(cmd.equalsIgnoreCase("register"))
 		{
-			response.sendRedirect("login.jsp");
 			String conf_pwd = request.getParameter("conf_pwd");
 			if(!password.equals(conf_pwd)) response.sendRedirect("register.jsp?msg=reg_pwd");
 			String nome = request.getParameter("nome");
@@ -36,9 +35,25 @@ public class gestAccount extends HttpServlet {
 			try {
 				db = new DBManager();
 				Utente u = new Utente(email,password,nome,cognome);
-				if(db.checkRegistration(u)) {response.sendRedirect("login.jsp?msg=reg_done");}
+				if(db.checkRegistration(u)) {
+					response.sendRedirect("login.jsp?msg=reg_done");
+					}
 				else {response.sendRedirect("register.jsp?msg=reg_exist");}
 			} catch (Exception e) {}
+		}
+		if(cmd.equalsIgnoreCase("login")) {
+			System.out.println("siu1");
+			DBManager db;
+			try {
+				System.out.println("siu2");
+				db = new DBManager();
+				if(db.checkLogin(email,password)){
+					System.out.println("siu3");
+					response.sendRedirect("home.jsp");
+				}else {
+					response.sendRedirect("login.jsp?msg=error");
+				}
+			}catch(Exception e) {}
 		}
 	}
 }

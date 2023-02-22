@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-image:url(./images/bg_log_reg.jpg); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.left-page{
+    height: 100%;
+    width: 50%;
+    left: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Cabin;
+}
+
+form{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter:blur(10px);
+    -webkit-box-shadow: -6px 3px 50px 41px #000000; 
+    box-shadow: -6px 3px 50px 41px #000000;
+    color: white;
+}
+
+
+.buttons{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;  
+}
+
+.access{
+    width: 80%;
+    height: 60px;
+    margin-top: 12px;
+    font-size: 18px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.access:link,
+.access:visited,
+.access:active{
+    text-decoration: none;
+}
+
+
+.access:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.access:first-child{
+    margin-top: 40%;
+    color: white;
+    background-color: rgb(161, 123, 75);
+}
+
+.access:last-child{
+    background-color: white;
+    transition: background-color 0.4s ease-in-out;
+    color: black;
+}
+
+.access:last-child:hover{
+    background-color: #dddddd;
+}
+
+.email-field,
+.password-field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin-top: 25px;
+}
+
+
+input[type="email"], 
+input[type="password"] {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-bottom: 3px solid white;
+    text-indent: 5px;
+    background: none;
+    color: white;
+    font-size: 15px;
+}
+
+input[type="email"]:focus, 
+input[type="password"]:focus{
+    outline: none;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 400;
+    margin-top: 20%;
+    margin-bottom: 25px;
+}
+
+a{
+    width: 60%;
+    height: 25px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 14px;
+    font-weight: 100;
+    transition: color 0.4s ease-in-out;
+}
+
+a:hover{
+    cursor: pointer;
+    color: rgb(22, 22, 22);
+}
+
+input[type="submit"]{
+    width: 25%;
+    height: 50px;
+    margin-top: 80px;
+    font-size: 20px;
+    font-weight:500;
+    background-color: rgb(161, 123, 75);
+    border: none;
+    border-radius: 30px;
+    color:white;
+    transition: background-color 0.4s ease-in-out;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: rgb(128, 95, 56);
+}
+
+.right-page{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+nav{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    border-radius: 20px;
+    border: 3px solid white;
+    transition: border 0.4s ease-in-out;
+}
+
+nav:hover{
+    cursor: pointer;
+    border: 3px solid rgb(161, 123, 75);
+}
+
+.home-icon{
+    width: 30px;
+    filter: invert();
+    padding: 3px;
+}
